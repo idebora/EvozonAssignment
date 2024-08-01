@@ -22,7 +22,7 @@ public class Main {
 
         System.out.println(calc.addition(2,4));
 
-        System.out.println(calc.substract(5,9));
+        System.out.println(calc.subtraction(5,9));
 
         System.out.println(calc.multiplication(3,4));
 
