@@ -120,7 +120,7 @@ public class LogicalOperations {
 //     a parameter and return true or false. If the number is even, return true;
 //     if it is odd, return false. Call the method in main() to check if it works.
 
-    public boolean evenNumber(int number){
+    public boolean evenNumber(int number) {
         if (number % 2 == 0) return true;
         else return false;
     }
@@ -130,7 +130,7 @@ public class LogicalOperations {
 //     has the right to vote. If the age is over 18, return true,
 //     otherwise return false. Call the method in main() to check if it works.
 
-    public boolean isEligibleToVote(int age){
+    public boolean isEligibleToVote(int age) {
         if (age > 18) {
             return true;
         } else {
@@ -141,19 +141,94 @@ public class LogicalOperations {
 //      11. Create a method that takes 3 numbers as parameters and returns the largest number.
 //      Call the method in main() to check if it works.
 
-    public int checkLargestNumber(int firstnumber, int secondNumber, int thirdNumber){
-        if (firstnumber>secondNumber && firstnumber>thirdNumber){
-            return firstnumber;}
-        else if (secondNumber>firstnumber && secondNumber > thirdNumber) {
-            return secondNumber;}
-        else if (thirdNumber>firstnumber && thirdNumber > secondNumber){
-            return thirdNumber;}
-        else
-        return firstnumber;
+    public int checkLargestNumber(int firstnumber, int secondNumber, int thirdNumber) {
+        if (firstnumber > secondNumber && firstnumber > thirdNumber) {
+            return firstnumber;
+        } else if (secondNumber > firstnumber && secondNumber > thirdNumber) {
+            return secondNumber;
+        } else if (thirdNumber > firstnumber && thirdNumber > secondNumber) {
+            return thirdNumber;
+        } else
+            return firstnumber;
+    }
+
+//     * Continuare assignment for loop
+//    5 Create a method in the LogicalOp class that displays all even numbers from 1 to 100.
+
+    public void evenNumbersToHundred() {
+        for (int i = 0; i <= 100; i++) {
+            if (i % 2 == 0) {
+                System.out.println(i);
+            }
+        }
+    }
+
+//     6. Create a method in the LogicalOp class that displays all odd numbers from 1 to 100.
+
+    public void oddNumbersToHundred() {
+        for (int i = 0; i <= 100; i++) {
+            if (i % 2 == 0) {
+                System.out.println(i);
+            }
+        }
+    }
+
+//   7. Create a method in the LogicalOp class that takes a number parameter.
+//   The method should add all numbers up to 100, starting from the number received as a parameter,
+//   and return the result at the end.
+//   Call the method in the Main class, main() method to check if it works.
+
+    public int addNumbersToHundred(int number) {
+        int sum = 0;
+        for (int i = number; i <= 100; i++) {
+            sum = sum + i;
+        }
+        return sum;
+    }
+
+    //  8.  Create a method in the LogicalOp class that takes a number parameter.
+//     The method should add all numbers up to 100, starting from the number received as a parameter,
+//     and calculate the average of the numbers. In the end, the method should return the average.
+//     Call the method in the Main class, main() method to check if it works.
+
+    public float averageNumbersToHundred(int number) {
+        int sum = 0;
+        int nr = 0;
+        for (int i = number; i <= 100; i++) {
+            sum = sum + i;
+            nr = nr + 1;
+        }
+        return (float) sum / nr;
+    }
+
+//    9.  Create a method in the LogicalOp class that displays the following pattern:
+//           *******
+//
+//           ******
+//
+//           *****
+//
+//           ****
+//
+//           ***
+//
+//           **
+//
+//           *
+
+    public void displayPattern() {
+        for (int i = 0; i <7; i++) {
+            for (int j = i; j < 7; j++){
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
     }
 
 
-    }
+}
+
+
 
 
 

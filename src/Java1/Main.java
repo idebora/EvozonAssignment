@@ -34,18 +34,25 @@ public class Main {
 //        System.out.println(op.compareTwoStrings("Evozon"));
 //
 //        System.out.println((op.compareStringNumber("Evhhozon",6)));
-//
-//        op.counterDownHundred(2);
-//
-//        op.counterBetweenTwoNumbers(50,50);
+
+        op.counterDownHundred(2);
+
+        op.counterBetweenTwoNumbers(50,50);
 
         System.out.println(op.evenNumber(9));
+
         System.out.println(op.checkLargestNumber(2,2,2));
+
         op.checkNumber(3);
 
+        op.evenNumbersToHundred();
+
+        System.out.println(op.addNumbersToHundred(44));
+
+        System.out.println(op.averageNumbersToHundred(99));
+
+        op.displayPattern();
     }
-
-
 
 
 
