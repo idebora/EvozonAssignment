@@ -1,5 +1,7 @@
 package Java1;
 
+import java.util.Scanner;
+
 public class LogicalOperations {
 
 
@@ -9,7 +11,7 @@ public class LogicalOperations {
 
     }
 
-    public String compareTwoStrings(String word){
+    public String compareTwoStrings(String word) {
 
         if (word.equals("Evozon")) {
             return "Learning text comparison";
@@ -19,16 +21,15 @@ public class LogicalOperations {
 
     }
 
-    public String compareStringNumber(String word, int number){
+    public String compareStringNumber(String word, int number) {
 
-        if (word.equals("Evozon") && number<=3) {
+        if (word.equals("Evozon") && number <= 3) {
             return word + number;
 
-        } else if ((!word.equals("Evozon")) && number>=4) {
+        } else if ((!word.equals("Evozon")) && number >= 4) {
             return number + word;
 
-        }
-        else {
+        } else {
             return "Conditiile nu au fost indeplinite simultan";
         }
     }
@@ -41,8 +42,8 @@ public class LogicalOperations {
 
     */
 
-    public void counterDownHundred(int number){
-        for(int i = number; i>=-100; i--){
+    public void counterDownHundred(int number) {
+        for (int i = number; i >= -100; i--) {
             System.out.println(i);
         }
     }
@@ -56,21 +57,105 @@ public class LogicalOperations {
 //    Call the method in the Main class, main() method to check if it works.
 
 
-    public void counterBetweenTwoNumbers(int firstNumber, int secondNumber ){
-        if (firstNumber<secondNumber) {
+    public void counterBetweenTwoNumbers(int firstNumber, int secondNumber) {
+        if (firstNumber < secondNumber) {
             for (int i = firstNumber; i <= secondNumber; i++) {
                 System.out.println(i);
             }
-        }
-        else {
+        } else {
             for (int i = secondNumber; i <= firstNumber; i++) {
                 System.out.println(i);
             }
         }
     }
 
-//     Create a method in the LogicalOp class that displays all even numbers from 1 to 100.
+//    ex 7 (if else)
+////    Create a String method that takes a number parameter. If the
+//    number is greater than 3 AND not equal to 4, return "The number is greater than 3 and not equal to 4".
+//    If the number is equal to 4, return "The number is equal to 4";
+//    if the number is less than 3, return "The number is lower than 3".
+//    Call the method in main() to check if it works.
+
+    public String verifyNumber3(int number) {
+
+        if (number < 3) {
+            return "The number is lower than 3";
+
+        } else if (number == 4) {
+            return "The number is equal to 4";
+
+        } else
+            return "The number is greater than 3 and not equal to 4";
+    }
+
+//    8. Create a method that takes a number as a parameter
+//    and displays the number received. Using the Switch-Case construct,
+//    check what number was received and display the text "The number is: x!"
+//    where x should represent the number pressed. For this example, do not
+//    use the concatenation of the string "The number is:" with the number from the parameter,
+//    but write the entire text including the number for each case in the Switch-Case.
+//    Call the method in main() to check if it works.
+
+    public void checkNumber(int number) {
+        switch (number) {
+            case 1:
+                System.out.println("The number is 1");
+                break;
+            case 2:
+                System.out.println("The number is 2");
+                break;
+            case 3:
+                System.out.println("The number is 3");
+                break;
+            case 4:
+                System.out.println("The number is 4");
+                break;
+            default:
+                System.out.println("The number is bigger than 4");
+                break;
+        }
+    }
+
+//     9. Create a method called isNumberEven. The method should take a number as
+//     a parameter and return true or false. If the number is even, return true;
+//     if it is odd, return false. Call the method in main() to check if it works.
+
+    public boolean evenNumber(int number){
+        if (number % 2 == 0) return true;
+        else return false;
+    }
+
+//     10. Create a method called isEligibleToVote. The method should take a number
+//     as a parameter representing the age, and the method should tell you if the person
+//     has the right to vote. If the age is over 18, return true,
+//     otherwise return false. Call the method in main() to check if it works.
+
+    public boolean isEligibleToVote(int age){
+        if (age > 18) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+//      11. Create a method that takes 3 numbers as parameters and returns the largest number.
+//      Call the method in main() to check if it works.
+
+    public int checkLargestNumber(int firstnumber, int secondNumber, int thirdNumber){
+        if (firstnumber>secondNumber && firstnumber>thirdNumber){
+            return firstnumber;}
+        else if (secondNumber>firstnumber && secondNumber > thirdNumber) {
+            return secondNumber;}
+        else if (thirdNumber>firstnumber && thirdNumber > secondNumber){
+            return thirdNumber;}
+        else
+        return firstnumber;
+    }
+
+
+    }
 
 
 
-}
+
+
